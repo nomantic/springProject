@@ -29,7 +29,7 @@ public class StudentService {
 
     public List<Student> getClassification(){
         List<Student> classification = new ArrayList<>(students.values());
-        classification.sort((a,b) -> Float.compare(a.getScore(), b.getScore()));
+        classification.sort((a,b) -> -1 * Float.compare(a.getScore(), b.getScore()));
         return classification;
     }
 
